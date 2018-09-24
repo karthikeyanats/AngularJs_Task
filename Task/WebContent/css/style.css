@@ -1,0 +1,77 @@
+/*----------------------------------------------
+css settings for HTML div exactCenter 
+------------------------------------------------*/
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+
+h1{
+	margin-top:20px;
+	margin-bottom:20px;
+	text-align: center;
+	background color: #ff8080;	
+}
+
+.text-center{
+	width:30%;
+	background-color: #c1fff8;
+	border-radius: 10px;	
+	border: 2px solid #ccc;
+	padding: 40px 60px 40px;
+	margin-top: 20px;
+	margin-left: 350px;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    background: #ffffff;
+}
+
+input:focus, input:focus {
+    background-color: #f0f0f0;
+    outline: none;
+}
+
+input[type=radio]{
+	 width: 10%;
+    background: #c1fff8;
+}
+
+.option{
+	width: 106%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    background: #ffffff;
+}
+
+hr {  
+    border: 5px solid #ff8080;
+    margin-bottom: 25px;
+}
+
+table {
+    border-collapse: collapse;
+    color: hsl(180,100%,24%);
+    margin-left: 100px;
+}
+
+th {
+    border: 1px solid hsl(180, 100%, 15%);
+    background: #c1fff8;
+    padding: 10px;
+}
+td {
+    border: 1px solid hsl(180, 100%, 15%);
+    padding: 10px;
+    color:black;
+    text-align:center;
+    background: #e6fffc;
+}
+td:nth-child(even) {
+    background-color: #ffffff;
+}

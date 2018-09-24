@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html ng-app="simpleApp">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+  <script src="js/app.js"></script>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body background="hero-BVClogin.jpg">
+
+<div ng-controller="simpleController as ctrl">             
+	    <h1> <strong>Task</strong>  </h1>
+	    
+	<table>
+        <tr>
+            <th>No</th>
+            <th>Name</th>
+            <th>Father's Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Address</th>
+            <th>Gender</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Pincode</th>
+            <th>Course</th>
+        </tr>
+        <tr ng-repeat="entry in ctrl.collection | limitTo: ctrl.limit"><td> {{$index + 1}} </td>
+            <td>{{ entry.name }} </td>
+            <td>{{ entry.father }} </td>
+            <td>{{ entry.email }} </td>
+            <td>{{ entry.phno }} </td>
+            <td>{{ entry.addr }} </td>
+            <td>{{ entry.sex }} </td>
+            <td>{{ entry.city }} </td>
+            <td>{{ entry.state }} </td>
+            <td>{{ entry.pin }} </td>
+            <td>{{ entry.course }} </td>
+        </tr>
+    </table>
+
+    <form class="text-center" ng-submit="ctrl.addEntry()">
+    
+        Name:<input type="text" ng-model="ctrl.newData.name" required>
+        
+        Father's Name:<input type="text" ng-model="ctrl.newData.father" required>
+                
+        Email:<input type="email" ng-model="ctrl.newData.email" required>
+        
+        Phone Number:<input type="number" ng-model="ctrl.newData.phno" required>
+        
+        Address:<input type="text" ng-model="ctrl.newData.addr" required>
+        
+        Gender:<input type="radio" ng-model="ctrl.newData.sex" value="male" required>Male &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        	   <input type="radio" ng-model="ctrl.newData.sex" value="female" required>Female <br>
+        	   
+        City:<select ng-model="ctrl.newData.city" class="option" required>
+                <option value="india">India</option>
+                <option value="Australia">Australia</option>
+                <option value="America">America</option>
+             </select>
+        
+        State:<select ng-model="ctrl.newData.state" class="option" required>
+                <option value="TN">Tamil Nadu</option>
+                <option value="HY">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+             </select>
+             
+         Pincode:<input type="number" ng-model="ctrl.newData.pin" required>
+         
+         Course:<select ng-model="ctrl.newData.course" class="option" required>
+                <option value="html">HTML</option>
+                <option value="java">Java</option>
+                <option value="css">CSS</option>
+             </select>
+             
+        <input type="submit" value="add">
+    </form>
+
+    </div>
+    </body>
+</html>
